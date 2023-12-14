@@ -60,7 +60,7 @@ def send_email(stock_dip_list):
         response = ses.send_email(**params)
         print(f"Successfully sent email: {response}")
     except Exception as e:
-        print(f"There is an error while sending email: {e}")
+        print(f"There is an error while sending emails: {e}")
 
 if __name__ == "__main__":
     lambda_handler(None, None)
