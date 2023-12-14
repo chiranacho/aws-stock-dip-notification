@@ -14,9 +14,9 @@ phases:
       - cd ..
       - zip -g deployment_package.zip lambda_function.py
   post_build:
-  commands:
-    - echo "Updating Lambda Function..."
-    - pwd  # Print current directory
-    - ls -l  # List files in the current directory
-    - aws lambda update-function-code --function-name stock-dip-notification --zip-file fileb://deployment_package.zip
-    - echo "DONE!!"
+    commands:
+      - echo "Updating Lambda Function..."
+      - pwd  # Print current directory
+      - ls -l  # List files in the current directory
+      - aws lambda update-function-code --function-name stock-dip-notification --zip-file fileb://deployment_package.zip
+      - echo "DONE!!"
